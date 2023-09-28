@@ -18,24 +18,25 @@ const freelancers = [
 ];
 
 // write function to render the initial freelancer
-render();
 
 function render() {
     // Render the freelancers
-    const freelancer = document.querySelector(".freelancerName");
-    const freelancerElements = freelancers.map((freelancer) => {
-      const element = document.createElement("li");
-      element.classList.add(freelancers.name, freelancers.occupation, freelancers.price);
-      return element;
+    const freelancer = document.querySelector('.freelancerName');
+    const paragraph = document.createElement('p');
+    paragraph.textContent = freelancers.map((freelancer) => {
+        const element = document.createElement("p");
+        element.classList.add(freelancers.name, freelancers.occupation, freelancers.price);
+        return element;
     });
-    freelancer.replaceChildren(...freelancerElements);
 }
+console.log(render());
+
 // write function to generate new random freelancer
 
 function addFreelancer() {
     const freelancer = freelancers[Math.floor(Math.random() * freelancers.length)];
     
-    freelancers.push({name:, occupation:, price:});
+    freelancers.push();
   
     render();
   
